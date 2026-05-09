@@ -12,16 +12,21 @@ export default function CTA() {
   };
 
   return (
-    <section id="cta" className="py-24 px-6">
+    <section id="cta" className="py-24 px-6 bg-[#0D1B2A]">
       <div className="max-w-2xl mx-auto text-center">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="w-8 h-0.5 bg-blue-400" />
+          <p className="text-xs text-blue-400 uppercase tracking-widest font-semibold">무료 체험</p>
+          <div className="w-8 h-0.5 bg-blue-400" />
+        </div>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           지금 바로 무료로 체험해보세요
         </h2>
-        <p className="text-gray-400 mb-10">
+        <p className="text-gray-400 mb-10 text-sm">
           신용카드 없이 14일 무료 체험. 언제든지 취소 가능합니다.
         </p>
         {submitted ? (
-          <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl px-6 py-8 text-blue-300">
+          <div className="bg-blue-600/10 border border-blue-500/30 rounded-lg px-6 py-8 text-blue-300 text-sm">
             신청이 완료됐습니다. 담당자가 24시간 이내에 연락드리겠습니다.
           </div>
         ) : (
@@ -32,16 +37,19 @@ export default function CTA() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="회사 이메일 주소"
               required
-              className="flex-1 bg-[#111827] border border-[#1F2937] text-white placeholder-gray-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+              className="flex-1 bg-white/5 border border-white/15 text-white placeholder-gray-500 rounded px-4 py-3 text-sm focus:outline-none focus:border-blue-400 transition-colors"
             />
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors whitespace-nowrap"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded text-sm transition-colors whitespace-nowrap"
             >
               데모 신청
             </button>
           </form>
         )}
+        <p className="text-xs text-gray-600 mt-4">
+          개인정보는 데모 안내 목적으로만 사용됩니다.
+        </p>
       </div>
     </section>
   );
