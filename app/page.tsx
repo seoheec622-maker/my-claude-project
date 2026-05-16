@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import MessageSection from "@/components/MessageSection";
+import ChatSection from "@/components/ChatSection";
 import DashboardPreview from "@/components/DashboardPreview";
 import Features from "@/components/Features";
 import Stats from "@/components/Stats";
@@ -11,6 +13,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#F8F9FA]">
       <Navbar />
       <Hero />
+      <MessageSection />
+      <ChatSection />
       <Stats />
       <DashboardPreview />
       <Features />
